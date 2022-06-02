@@ -1021,7 +1021,7 @@ func TestClient_GenerateTenantToken(t *testing.T) {
 			args: args{
 				UID: "TestGenerateTenantTokenWithoutApiKey",
 				client: NewClient(ClientConfig{
-					Host:   "http://localhost:7700",
+					Host:   meilisearchHost,
 					APIKey: "",
 				}),
 				searchRules: map[string]interface{}{
@@ -1072,7 +1072,7 @@ func TestClient_GenerateTenantToken(t *testing.T) {
 				}
 
 				client := NewClient(ClientConfig{
-					Host:   "http://localhost:7700",
+					Host:   meilisearchHost,
 					APIKey: token,
 				})
 
